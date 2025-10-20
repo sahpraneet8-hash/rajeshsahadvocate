@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate Rajesh Sah - Leading Legal Expert in Bettiah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f0a500;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23534c3d" width="1200" height="600"/><path fill="%23705a3f" d="M0 300L50 285L100 300L150 290L200 300L250 285L300 300L350 295L400 300L450 285L500 300L550 290L600 300L650 285L700 300L750 295L800 300L850 285L900 300L950 290L1000 300L1050 285L1100 300L1150 295L1200 300V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 2rem 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero .title {
+            font-size: 1.5rem;
+            color: #f0a500;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f0a500;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+        
+        .services {
+            background: #f8f9fa;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            color: #f0a500;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .expertise-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .expertise-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .expertise-list li:before {
+            content: "⚖";
+            position: absolute;
+            left: 0;
+            color: #f0a500;
+        }
+        
+        .contact {
+            background: #1a1a2e;
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0a500;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            color: #f0a500;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f0a500;
+            color: #1a1a2e;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #d89400;
+        }
+        
+        footer {
+            background: #0f0f1e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">⚖ ADVOCATE RAJESH SAH</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>ADVOCATE RAJESH SAH</h1>
+        <p class="title">Leading Legal Expert in Bettiah District</p>
+        <p>With over 20+ years of exceptional legal service and a proven track record of winning 90% of cases, I provide expert legal representation in criminal law, land disputes, family matters, and affidavit services.</p>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">90%</div>
+                <div class="stat-label">Cases Won</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">#1</div>
+                <div class="stat-label">Advocate in Bettiah</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Legal Services Offered</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📜</div>
+                    <h3>Affidavit Services</h3>
+                    <p>Complete affidavit drafting and notarization services for all legal purposes including court submissions, property matters, and official declarations.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">₹999 Only</strong>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Land & Property Disputes</h3>
+                    <p>Expert handling of land acquisition, property disputes, title verification, partition suits, and real estate litigation with proven success rate.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">₹2,999 per Hearing</strong>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚖</div>
+                    <h3>Criminal Defense</h3>
+                    <p>Specialized representation in murder cases, criminal trials, bail applications, and all aspects of criminal law with aggressive defense strategies.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">₹2,999 per Hearing</strong>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧</div>
+                    <h3>Family Law</h3>
+                    <p>Compassionate handling of divorce, child custody, maintenance, domestic violence cases, and all family dispute matters with sensitivity and expertise.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">₹2,999 per Hearing</strong>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Civil Litigation</h3>
+                    <p>Comprehensive civil law services including contract disputes, recovery suits, injunctions, and appeals in various civil matters.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">₹2,999 per Hearing</strong>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Legal Consultation</h3>
+                    <p>Professional legal advice and consultation for individuals and businesses on all legal matters with practical solutions.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #f0a500;">
+                        <strong style="color: #f0a500; font-size: 1.3rem;">Contact for Pricing</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Advocate Rajesh Sah</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Legal Advocate</h3>
+                    <p>I am Advocate Rajesh Sah, a distinguished legal professional practicing in Bettiah District Courts with over two decades of exceptional service. At 45 years of age, I bring maturity, experience, and a deep understanding of law to every case I handle.</p>
+                    <p>My practice is built on three pillars: integrity, dedication, and results. With an impressive 90% success rate, I have earned the trust of countless clients and the respect of the legal community in Bettiah.</p>
+                    <p>I believe that every client deserves personalized attention and aggressive representation. Whether you're facing a complex murder trial, dealing with property disputes, navigating family conflicts, or need affidavit services, I provide expert guidance and unwavering support throughout your legal journey.</p>
+                    <ul class="expertise-list">
+                        <li>Expert in Criminal Law & Murder Cases</li>
+                        <li>Specialist in Land & Property Litigation</li>
+                        <li>Experienced in Family Dispute Resolution</li>
+                        <li>Comprehensive Affidavit Services</li>
+                        <li>Strong Court Representation</li>
+                    </ul>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f0a500 0%, #d89400 100%); border-radius: 10px; box-shadow: 0 5px 15px rgba(240,165,0,0.3);">
+                        <h3 style="color: #1a1a2e; margin-bottom: 1rem; font-size: 1.5rem;">🏆 Why Choose Me?</h3>
+                        <p style="color: #1a1a2e; font-weight: bold; margin-bottom: 0.5rem;">✓ 90% Case Success Rate - Proven Track Record</p>
+                        <p style="color: #1a1a2e; font-weight: bold; margin-bottom: 0.5rem;">✓ 20+ Years of Courtroom Excellence</p>
+                        <p style="color: #1a1a2e; font-weight: bold; margin-bottom: 0.5rem;">✓ #1 Rated Advocate in Bettiah District</p>
+                        <p style="color: #1a1a2e; font-weight: bold; margin-bottom: 0.5rem;">✓ Transparent & Affordable Pricing</p>
+                        <p style="color: #1a1a2e; font-weight: bold;">✓ Personalized Attention to Every Case</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="#1a1a2e" width="400" height="500"/>
+                        <rect x="80" y="100" width="240" height="300" rx="10" fill="#f0a500"/>
+                        <rect x="100" y="120" width="200" height="260" rx="5" fill="#fff"/>
+                        <circle cx="200" cy="200" r="40" fill="#1a1a2e"/>
+                        <rect x="140" y="260" width="120" height="10" rx="5" fill="#1a1a2e"/>
+                        <rect x="140" y="280" width="120" height="10" rx="5" fill="#1a1a2e"/>
+                        <rect x="140" y="300" width="80" height="10" rx="5" fill="#1a1a2e"/>
+                        <text x="200" y="440" font-family="Georgia" font-size="24" fill="#f0a500" text-anchor="middle" font-weight="bold">JUSTICE</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get in Touch</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">Schedule a consultation to discuss your legal matter. Available for urgent cases.</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Office Location</h3>
+                    <p>Bettiah District Court<br>Bettiah, Bihar</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>+91 6202481403</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Available Mon-Sat<br>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <h3>Email</h3>
+                    <p>kamit22781@gmail.com</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">We respond within 24 hours</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="cta-button">BOOK CONSULTATION NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Advocate Rajesh Sah. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Practicing at Bettiah District Courts | Dedicated to Justice</p>
+    </footer>
+</body>
+</html>
